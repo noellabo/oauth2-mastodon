@@ -52,7 +52,7 @@ class MastodonResourceOwner implements ResourceOwnerInterface
      */
     public function getEmail()
     {
-        return $this->getValueByKey($this->response, 'email');
+        return $this->getValueByKey($this->response, 'acct') . '@' . $this->domain . '.invalid';
     }
 
     /**
