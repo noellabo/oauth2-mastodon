@@ -132,6 +132,9 @@ class MastodonResourceOwner implements ResourceOwnerInterface
      */
     public function toArray()
     {
-        return $this->response;
+        return array_merge($this->response, [
+            'fullacct' => $this->getAcct(),
+            'pseudo_email' => $this->getPseudoEmail(),
+        ]);
     }
 }
