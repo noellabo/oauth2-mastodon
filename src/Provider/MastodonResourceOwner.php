@@ -46,11 +46,11 @@ class MastodonResourceOwner implements ResourceOwnerInterface
     }
 
     /**
-     * Get resource owner email
+     * Get resource owner email (pseudo)
      *
      * @return string|null
      */
-    public function getEmail()
+    public function getPseudoEmail()
     {
         return $this->getValueByKey($this->response, 'acct') . '@' . $this->domain . '.invalid';
     }
